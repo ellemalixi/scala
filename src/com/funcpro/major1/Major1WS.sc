@@ -81,7 +81,7 @@ object Major1WS {
  	3.)
  */
  def factorial(n:Int):Unit = {
- 	val num = (n * (n+1));
+ 	val num = (n * (n-1));
  	
  	if (n != 0) {
  		if (num == 0) {
@@ -93,7 +93,7 @@ object Major1WS {
  	}
 }                                                 //> factorial: (n: Int)Unit
 	
- factorial(1);                                    //> java.lang.StackOverflowError
+ factorial(3);                                    //> java.lang.StackOverflowError
                                                   //| 	at com.funcpro.major1.Major1WS$.factorial$1(com.funcpro.major1.Major1WS.
                                                   //| scala:60)
                                                   //| 	at com.funcpro.major1.Major1WS$.factorial$1(com.funcpro.major1.Major1WS.
@@ -122,14 +122,15 @@ object Major1WS {
  	4.)
  */
  
- def sum (x:Int):Unit = {
- 	val last = x%10;
- 	val first = x/10;
- 	val ans = first + last;
+ def sum (x:Int):Int = {
  	
- 		sum(x+ans);
- 		println(ans);
+	 	if (x == 0) {
+	 		0;
+	 	} else {
+	 		sum((x/10) % 10) + sum((x/100) % 10);
+	 	}
  }
  
- sum(23);
+ 	sum(23);
+
 }

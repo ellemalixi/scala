@@ -51,7 +51,7 @@ object Major1WS {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
  	3.)
  */
  def factorial(n:Int):Unit = {
- 	val num = (n * (n+1));
+ 	val num = (n * (n-1));
  	
  	if (n != 0) {
  		if (num == 0) {
@@ -63,21 +63,22 @@ object Major1WS {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
  	}
 };System.out.println("""factorial: (n: Int)Unit""");$skip(17); 
 	
- factorial(1);$skip(149); ;
+ factorial(3);$skip(134); ;
 
  
  /**
  	4.)
  */
  
- def sum (x:Int):Unit = {
- 	val last = x%10;
- 	val first = x/10;
- 	val ans = first + last;
+ def sum (x:Int):Int = {
  	
- 		sum(x+ans);
- 		println(ans);
- };System.out.println("""sum: (x: Int)Unit""");$skip(12); 
+	 	if (x == 0) {
+	 		0;
+	 	} else {
+	 		sum((x/10) % 10) + sum((x/100) % 10);
+	 	}
+ };System.out.println("""sum: (x: Int)Int""");$skip(13); val res$1 = 
  
- sum(23);}
+ 	sum(23);;System.out.println("""res1: Int = """ + $show(res$1))}
+
 }
