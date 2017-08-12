@@ -63,7 +63,7 @@ object Major1WS {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
  	}
 };System.out.println("""factorial: (n: Int)Unit""");$skip(17); 
 	
- factorial(1);$skip(147); ;
+ factorial(1);$skip(149); ;
 
  
  /**
@@ -75,9 +75,9 @@ object Major1WS {;import org.scalaide.worksheet.runtime.library.WorksheetSupport
  	val first = x/10;
  	val ans = first + last;
  	
- 		sum(ans);
+ 		sum(x+ans);
  		println(ans);
- };System.out.println("""sum: (x: Int)Unit""")}
+ };System.out.println("""sum: (x: Int)Unit""");$skip(12); 
  
- 
+ sum(23);}
 }

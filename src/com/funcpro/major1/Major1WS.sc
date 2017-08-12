@@ -127,9 +127,9 @@ object Major1WS {
  	val first = x/10;
  	val ans = first + last;
  	
- 		sum(ans);
+ 		sum(x+ans);
  		println(ans);
  }
  
- 
+ sum(23);
 }
